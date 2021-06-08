@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1258.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="se.scandium.hotelproject.controller.fxml.ViewBookingsController">
+   <children>
+      <TableView fx:id="bookingDtoTableView" layoutX="211.0" layoutY="63.0" prefHeight="500.0" prefWidth="925.0">
+        <columns>
+            <TableColumn fx:id="bookingIdColumn" prefWidth="75.0" text="Booking ID">
+                <cellValueFactory>
+                    <PropertyValueFactory property="id" />
+                </cellValueFactory>
+            </TableColumn>
+<!--            <TableColumn fx:id="customerColumn" prefWidth="75.0" text="Customer">-->
+<!--                <cellValueFactory>-->
+<!--                    <PropertyValueFactory property="Customer" />-->
+<!--                </cellValueFactory>-->
+<!--            </TableColumn>-->
+            <TableColumn fx:id="customerFirstNameColumn" prefWidth="75.0" text="First Name">
+                <cellValueFactory>
+                    <PropertyValueFactory property="firstName" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="customerLastNameColumn" prefWidth="75.0" text="Last Name">
+                <cellValueFactory>
+                    <PropertyValueFactory property="lastName" />
+                </cellValueFactory>
+            </TableColumn>
+<!--            <TableColumn fx:id="roomIdColumn" prefWidth="75.0" text="Room ID">-->
+<!--                <cellValueFactory>-->
+<!--                    <PropertyValueFactory property="room" />-->
+<!--                </cellValueFactory>-->
+<!--            </TableColumn>-->
+            <TableColumn fx:id="roomTypeColumn" prefWidth="75.0" text="Room Type">
+                <cellValueFactory>
+                    <PropertyValueFactory property="roomType" />
+                </cellValueFactory>
+            </TableColumn>
+<!--            <TableColumn fx:id="reservedColumn" prefWidth="75.0" text="Reserved">-->
+<!--                <cellValueFactory>-->
+<!--                    <PropertyValueFactory property="status" />-->
+<!--                </cellValueFactory>-->
+<!--            </TableColumn>-->
+            <TableColumn fx:id="startDateColumn" prefWidth="75.0" text="Start Date">
+                <cellValueFactory>
+                    <PropertyValueFactory property="fromDate" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="endDateColumn" prefWidth="75.0" text="End Date">
+                <cellValueFactory>
+                    <PropertyValueFactory property="toDate" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="paidColumn" prefWidth="75.0" text="Paid">
+                <cellValueFactory>
+                    <PropertyValueFactory property="pay" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="noOfPersonsColumn" prefWidth="100.0" text="No of Persons">
+                <cellValueFactory>
+                    <PropertyValueFactory property="numberOfPersons" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="paymentColumn" prefWidth="100.0" text="Payment">
+                <cellValueFactory>
+                    <PropertyValueFactory property="payType" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="fullPriceColumn" prefWidth="75.0" text="FullPrice">
+                <cellValueFactory>
+                    <PropertyValueFactory property="fullPrice" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="breakfastColumn" prefWidth="50.0" text="Breakfast">
+                <cellValueFactory>
+                    <PropertyValueFactory property="breakfast" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="lunchColumn" prefWidth="50.0" text="Lunch">
+                <cellValueFactory>
+                    <PropertyValueFactory property="lunch" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+      </TableView>
+      <AnchorPane prefHeight="63.0" prefWidth="1258.0" style="-fx-background-color: #424242;">
+         <children>
+             <Label alignment="CENTER" layoutX="254.0" layoutY="11.0" prefHeight="41.0" prefWidth="750.0" text="Bookings" textFill="WHITE">
+                 <font>
+                     <Font size="24.0" />
+                 </font>
+             </Label>
+         </children>
+      </AnchorPane>
+       <ComboBox fx:id="filterComboBox" layoutX="54.0" layoutY="63.0" prefWidth="150.0" promptText="Select Filter" />
+      <ComboBox fx:id="roomComboBox" layoutX="54.0" layoutY="93.0" prefWidth="150.0" promptText="Select a room" />
+       <DatePicker fx:id="checkSpecificDateBooking" layoutX= "54.0" layoutY="123" prefHeight="25.0" prefWidth="150.0" promptText="Search for a specific day"/>
+       <TextField fx:id="searchField" layoutX= "54.0" layoutY="153" prefHeight="25.0" prefWidth="150.0" promptText="Search for a name" />
+      <JFXButton fx:id="refreshButton" layoutX="54.0" layoutY="538.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #0bc76f;" text="Refresh" />
+       <JFXButton fx:id="filterButton" layoutX="54.0" layoutY="508.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #0bc76f;" text="Filter" />
+      <JFXButton fx:id="PayButton" layoutX="54.0" layoutY="478.0" mnemonicParsing="false" prefHeight="7.0" prefWidth="150.0" style="-fx-background-color: #0bc76f;" text="Marked as Paid" />
+   </children>
+</AnchorPane>
