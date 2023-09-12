@@ -43,7 +43,7 @@ public class InitData implements CommandLineRunner {
     }
 
     @Transactional
-    void saveUsers() {
+    public void saveUsers() {
         Authority userAuthority = null;
         Authority hotelAuthority = null;
         if (authorityRepository.findByNameIgnoreCase("user_management").isEmpty())
