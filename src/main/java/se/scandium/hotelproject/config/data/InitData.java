@@ -77,7 +77,7 @@ public class InitData implements CommandLineRunner {
     }
 
     @Transactional
-    void hotelInformation() {
+    public void hotelInformation() {
         Hotel hotel = hotelRepository.save(new Hotel("Test Hotel",5,new Address("VAXJO Street","35252","VAXJO","SWEDEN")));
         HotelHolder.getInstance().setHotelDto(new HotelDto(hotel.getId(),hotel.getName(),hotel.getStar(),new AddressDto(hotel.getAddress().getStreet(),hotel.getAddress().getZipCode(),hotel.getAddress().getCity(),hotel.getAddress().getCountry())));
     }
