@@ -46,7 +46,7 @@ A good example in our code would be the BookingDto and the Booking entity. They 
 
 <em> 1. As a user, I should be able to start the application and see a welcome screen </em>
 
-* When using an IDE such as IntelliJ, a user can run the program directly by pressing play on the “HotelProjectSpringApplication.java” file.
+* When using an IDE such as IntelliJ and set up Database in application.properties file, a user can run the program directly by pressing play on the “HotelProjectSpringApplication.java” file.
 * Once the build is finished, the login window will open, welcoming the user and prompting them to enter their username and password.
 * After the information has been filled out, the user can then press enter and if the credentials are correct the user will be logged in and welcomed by the welcome screen.
 
